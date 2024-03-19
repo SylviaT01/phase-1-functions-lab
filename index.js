@@ -36,17 +36,17 @@ function distanceTravelledInFeet(start, destination){
 }
 function calculatesFarePrice(start, destination) {
     const feet = 264; 
-    const freeSampleDistance = 400;
+    const freeSample = 400;
     const perFootCharge = 0.02;
     const maxDistance = 2500;
     const over2000Charge = 25;
   
     let distance = Math.abs(destination - start) * 264;
   
-    if (distance <= freeSampleDistance) {
+    if (distance <= freeSample) {
       return 0;
-    } else if (distance > freeSampleDistance && distance <= 2000) {
-      return (distance - freeSampleDistance) * 0.02;
+    } else if (distance > freeSample && distance <= 2000) {
+      return (distance - freeSample) * 0.02;
     } else if (distance > 2000 && distance <= maxDistance) {
       return 25;
     } else {
